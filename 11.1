@@ -1,0 +1,13 @@
+from PIL import Image
+
+
+
+def resize_image(file_name):
+    photo = Image.open(file_name)
+    photo = Image.resize((800, 600))
+    photo.save(file_name)
+
+
+for i in range(1, 100): # количество нужных вам повторений
+    file_name = 'ваше фото'
+    resize_image(file_name)
